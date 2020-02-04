@@ -1,3 +1,3 @@
 # AtCoder
 
-https://atcoder.jp/
+https://atcoder.jp/users/kyosukekita
