@@ -3,7 +3,7 @@ using namespace std;
  
 int main() {
   char s;
-  cin >> s; // 変数sで入力を一行受け取る
+  cin >> s;
   
   if (s=='a' || s=='e' || s=='i' || s=='o' || s=='u' ){
     cout << "vowel " << endl;
