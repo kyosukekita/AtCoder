@@ -1,3 +1,5 @@
+#リュカ数を再帰的に求める。メモ化している。フィボナッチ数列でも同じことができるね。
+
 #include <bits/stdc++.h>
 using namespace std;
 
