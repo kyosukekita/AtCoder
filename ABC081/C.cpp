@@ -17,7 +17,7 @@ int main() {
     bucket.at(A.at(i))++;
   }
   
-  if (bucket.size() <=K){
+  if (bucket.size() <=K){//ここおかしいね。偶然うまくいっただけだろう。
     cout << 0 << endl;
     return 0;
   }else{
