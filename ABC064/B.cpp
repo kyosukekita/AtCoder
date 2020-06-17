@@ -9,7 +9,10 @@ int main() {
   for(int i=0; i<N; i++){
     cin >> a.at(i);
   }
-  
+ 
+ 
+  //std::*_element は，イテレーターを返すので '*' で値を取得する.
+  //std::vector<int>::iterator
   int maximum=*max_element(a.begin(),a.end());
   int minimum=*min_element(a.begin(),a.end());
   
