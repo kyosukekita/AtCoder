@@ -10,7 +10,7 @@ int intToBit(int num){
   while(1){
     int tmp;
     tmp = num%10;
-    bit |= (1<<tmp);
+    bit |= (1<<tmp);//ビットbitにi番目のフラグを立てる
     num /= 10;
     if(num == 0) break;
   }
@@ -28,7 +28,7 @@ int main() {
   }
   int res = N;
   while(1){
-    if(!(intToBit(res) & hate)) break;
+    if(!(intToBit(res) & hate)) break;//intToBit(res)とhateのフラグの立っている位置が同じでない。
     res++;
   }
   cout << res << endl;
