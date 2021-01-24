@@ -10,10 +10,10 @@ int main(){
   vector<int> d(4);
   rep(i, 4) d[i] = s[i] - '0';
   int sum = 0;
-  rep(bit, 1 << 3){
+  rep(bit, 1 << 3){ //ここでbitset<3> s(bit);を定義すると、
     sum = d[0];
     rep(i, 3){
-      if ((bit & (1 << i)) != 0){
+      if ((bit & (1 << i)) != 0){// if (s.test(i))　
         sum += d[i + 1];
       } else {
         sum -= d[i + 1];
@@ -22,7 +22,7 @@ int main(){
     if (sum == 7){
       cout << d[0];
       rep(j, 3){
-        if ((bit & (1 << j)) != 0){
+        if ((bit & (1 << j)) != 0){ //if (s.test(i))とかけてすっきり
           cout << '+';
         } else {
           cout << '-';
