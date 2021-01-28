@@ -1,3 +1,21 @@
+//https://atcoder.jp/contests/abc156/submissions/19702320
+int modcmb(int n, int r, int mod){
+  int x=1;
+  int y=1;
+  for(int i=0; i<r;i++){
+    x=x*(n-i)%mod;
+    y=y*(i+1)%mod;
+  }
+  return x*modpow(y,mod-2,mod)%mod;
+}
+
+
+
+
+
+
+
+
 //REになってしまう解法
 #include <bits/stdc++.h>
 using namespace std;
