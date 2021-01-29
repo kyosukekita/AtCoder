@@ -2,6 +2,26 @@
 using namespace std;
 using ll= long long ;
 
+int main(){
+  ll N; cin >> N;
+  string ans="";
+  while(N>0){
+    N--;
+    ans =(char)('a'+(N%26))+ans;
+    N/=26;
+  }
+  cout << ans << endl;
+  cout << "gbdpxgrzxjm" << endl; 
+}  
+
+
+
+
+//実際に使った方法。スマートじゃない
+#include <bits/stdc++.h>
+using namespace std;
+using ll= long long ;
+
 string intTostring(int n){
   string s;
   s= (n + 97-1);//今回は96から
