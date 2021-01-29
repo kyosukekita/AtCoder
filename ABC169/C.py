@@ -3,6 +3,6 @@
 
 a,b=map(float,input().split())
 a=int(a)
-b=int(b*100)
+b=int(b*100+0.01)
 
 print(int(a*b//100))
