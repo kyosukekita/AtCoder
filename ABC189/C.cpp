@@ -17,3 +17,36 @@ int main(){
 	}
 	cout << ans;
 }
+
+
+//WA
+#include<bits/stdc++.h>
+using namespace std;
+using ll= long long;
+int main(){
+  ll N;
+  cin >> N;
+  
+  vector<ll> vec(N);
+  for(int i=0; i<N; i++){
+    cin >> vec[i];
+  }
+  
+  int l=0;
+  int r=N;
+  ll sum=-1;
+  while(l<=r && l<N && r-1>=0){
+    ll x;
+    x=*min_element(vec.begin()+l,vec.begin()+r);
+    if(sum < (r-l)*x){
+      sum = (r-l)*x;
+    }else{
+      if(vec[r-1]>=vec[l]){
+        l++;
+      }else{
+        r--;
+      }
+    }
+  }
+  cout << sum << endl;
+}
