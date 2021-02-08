@@ -1,8 +1,31 @@
+N, K = map(int, input().split())
+A = list(map(int, input().split()))
+ 
+town = 1
+visited = [town]
+ 
+flag = [0] * N
+flag[0] = 1
+ 
+for _ in range(K):
+  town = A[town-1]
+  if not flag[town-1]:
+    flag[town-1] = 1
+    visited.append(town)
+  else:
+    break
+
+s = visited.index(town)
+cycle = visited[s:]
+print(cycle[(K-s) % len(cycle)])
+
+
+
+#3/57がTLEになる
 N,K=map(int,input().split())
 A=list(map(int,input().split()))
 A=[i-1 for i in A]#すべての要素の数を1減らしておく
 
-from collections import deque
 repeat=[] #繰り返しの部分
 seen=[False for _ in range(N)]#既にみたことがあったかどうか
 current=0 #今0(町1)にいる。
