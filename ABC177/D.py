@@ -1,4 +1,4 @@
-#Union Find
+#Union Find https://juppy.hatenablog.com/entry/2018/11/08/%E8%9F%BB%E6%9C%AC_python_Union-Find%E6%9C%A8_%E7%AB%B6%E6%8A%80%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0
 
 #xの根を求める
 def find(x):
@@ -41,7 +41,7 @@ AB=[list(map(int,list(input().split()))) for _ in range(M)]
 
 #初期化
 #根なら-size,子なら親の頂点
-par = [-1]*N
+par = [-1]*N #par(ents)を保存する
 
 for ab in AB:
   unite(ab[0]-1,ab[1]-1)
