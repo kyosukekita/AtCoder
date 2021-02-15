@@ -1,3 +1,24 @@
+# 整数の入力
+a = int(input())
+# スペース区切りの整数の入力
+b, c = map(int, input().split())
+# 文字列の入力
+s = input()
+#リスト入力
+c=list(map(int,input().split()))
+S = [input() for _ in range(N)]
+#2次元配列入力
+s=[list(map(int,list(input().split()))) for _ in range(h)]
+# 出力
+print("{} {}".format(a+b+c, s))
+
+#再帰
+import sys
+sys.setrecursionlimit(10**6)
+
+
+
+
 #a,bの最大公約数
 def gcd(a, b):
     while b:
