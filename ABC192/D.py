@@ -28,3 +28,11 @@ else: #二分探索
   ans=left-d
 
 print(ans)
+
+
+
+#ちなみに、10進数をn進数に変換するコードは以下
+def Base_10_to_n(X, n):
+    if (int(X/n)):
+        return Base_10_to_n(int(X/n), n)+str(X%n)
+    return str(X%n)
